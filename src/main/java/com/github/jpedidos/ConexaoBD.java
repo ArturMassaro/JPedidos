@@ -23,6 +23,7 @@ public class ConexaoBD {
 		       DriverManager.getConnection("jdbc:mysql://localhost/mysql","root", "password");
 
 		    // Do something with the Connection
+				
 		} catch (SQLException ex) {
 		    // handle any errors
 			ex.printStackTrace();
