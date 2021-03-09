@@ -1,4 +1,4 @@
-package com.github.jpedidos;
+package com.github.jpedidos.database;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -9,6 +9,8 @@ import java.sql.SQLException;
 	Use ela como ponto de partida. 
  */
 public class ConexaoBD {
+	public static Connection conn = null;
+
 	public static void main(String[] args) {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
@@ -16,11 +18,11 @@ public class ConexaoBD {
 			ex.printStackTrace();
 		}
 		
-		Connection conn = null;
 
 		try {
 		    conn =
-		       DriverManager.getConnection("jdbc:mysql://localhost/mysql","root", "password");
+		       DriverManager.getConnection("jdbc:mysql://localhost/jpedidos","root", "postgres");
+				System.out.println("Connection: " + conn);
 
 		    // Do something with the Connection
 				
