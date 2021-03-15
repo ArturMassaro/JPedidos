@@ -8,7 +8,7 @@ public class ProductsMigration {
 		// Inicie a app aqui
 		ConexaoBD connect = new ConexaoBD();
 		
-		String sql = "CREATE TABLE IF NOT EXISTS `jpedidos`.`products` (`id` INT NOT NULL AUTO_INCREMENT,`name` VARCHAR(1000) NOT NULL,`description` VARCHAR(1000) NULL,`price` FLOAT NOT NULL,`created_at` DATETIME NOT NULL,`updated_at` DATETIME NULL,PRIMARY KEY (`id`));";
+		String sql = "CREATE TABLE IF NOT EXISTS `jpedidos`.`products` (`id` INT NOT NULL AUTO_INCREMENT,`name` VARCHAR(1000) NOT NULL,`description` VARCHAR(1000) NULL,`price` FLOAT NOT NULL,`qtd` int NOT NULL,`created_at` DATETIME NOT NULL,`updated_at` DATETIME NULL,PRIMARY KEY (`id`));";
 
 		//Prepara a instrução SQL
 		try {
